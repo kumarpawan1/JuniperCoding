@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Juniper Networks: Contrail -- Coding Challenge</title>
+
+        <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="js/vendor/jquery.mockjax.min.js"></script>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+        <!--
+            Add your allowed additional libraries/frameworks here
+            you can use CDN or local files (put them under the "vendor" folder).
+        -->
+    </head>
+    <body>
+        <div class="container">
+            <div style="padding: 20px">
+                <ul class="nav nav-pills nav-justified">
+                    <li role="presentation" class="active"><a data-toggle="tab" href="#chart1" id="chart1toggle">Connected Nodes</a></li>
+                    <li role="presentation"><a data-toggle="tab" href="#chart2" id="chart2toggle">Matrix</a></li>
+                </ul>
+
+                <div class="row" style="padding: 10px">
+                    <ul class="nav nav-pills nav-justified frozenpills">
+                        <li id="continuousli" role="presentation" class="active"><a class="frozenlink" href="#">Continuous</a></li>
+                        <li id="frozenli" role="presentation"><a class="frozenlink" href="#" >Frozen</a></li>
+                    </ul>
+                </div>
+
+                <div class="row tab-content">
+                    <div id="chart1" class="tab-pane fade in active">
+                        <!--<h3 align="center">Connected Graph</h3>-->
+                        <div><svg id="svgchart1" width="1100" height="600"></svg></div>
+                    </div>
+                    <div id="chart2" class="tab-pane fade">
+                        <!--<h3 align="center">Matrix</h3>-->
+                        <div><svg id="svgchart2" width="1100" height="600"></svg></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/mockAPIs.js"></script>
+        <!--
+            The below script is for demo purpose only,
+            remove it before starting development.
+        -->
+        <script src="js/appmain.js"></script>
+    </body>
+</html>
